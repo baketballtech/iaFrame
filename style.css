@@ -1,0 +1,153 @@
+:root {
+  --bg-main: #030404;
+  --bg-panel: #1D1F21;
+  --bg-user: #0F2823;
+  --bg-bot: #07201D;
+  --text: #DDDEE5;
+  --border: #2a2d30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTAINER PRINCIPAL */
+.app {
+  width: 100%;
+  max-width: 900px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+}
+
+/* TOPO */
+.top {
+  padding: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.top h1 {
+  font-size: 18px;
+}
+
+.top span {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* CHAT */
+.chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* MENSAGENS */
+.msg {
+  max-width: 80%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--bg-user);
+}
+
+.bot {
+  align-self: flex-start;
+  background: var(--bg-bot);
+}
+
+/* INPUT */
+.input-box {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  gap: 10px;
+}
+
+.input-box input {
+  flex: 1;
+  background: #0b0c0d;
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  outline: none;
+}
+
+.input-box button {
+  background: var(--bg-bot);
+  color: var(--text);
+  border: none;
+  border-radius: 10px;
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-box button:hover {
+  opacity: 0.8;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+  .app {
+    max-width: 100%;
+  }
+
+  .msg {
+    max-width: 90%;
+  }
+}
+
+main.app{
+    border-radius: 10px;
+    width: 98vw;
+}
+
+#title{
+    text-align: center;
+    margin: auto;
+}
+
+.msg pre {
+  background-color: #1d1f21;  /* fundo escuro */
+  color: #d5d5d5;            /* cor do texto */
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;           /* scroll horizontal se necessário */
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;      /* quebra linhas longas */
+  margin: 8px 0;
+}
+
+.msg code {
+  font-family: 'Courier New', monospace;
+}
+
+.msg.bot {
+  background-color: #07201d; /* cor de fundo das mensagens da IA */
+  color: #dddee5;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 6px 0;
+}
