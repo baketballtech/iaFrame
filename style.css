@@ -84,7 +84,7 @@ body {
   gap: 10px;
 }
 
-.input-box input {
+.input-box textarea {
   flex: 1;
   background: #0b0c0d;
   color: var(--text);
@@ -92,7 +92,17 @@ body {
   border-radius: 10px;
   padding: 12px;
   outline: none;
+
+  /* 🔥 ESSENCIAL para texto grande */
+  min-height: 120px;
+  resize: none;              /* impede arrastar */
+  overflow-y: hidden;        /* esconde scroll */
+  line-height: 1.5;
+  font-size: 15px;
+  white-space: pre-wrap;     /* mantém quebras de linha */
+  word-wrap: break-word;     /* quebra palavras grandes */
 }
+
 
 .input-box button {
   background: var(--bg-bot);
